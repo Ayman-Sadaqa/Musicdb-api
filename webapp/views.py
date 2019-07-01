@@ -10,10 +10,18 @@ from .serializers import SongSerializer
 
 
 @api_view(["GET"])
+def ArtistList(request):
+    Artist1 = Artist.objects.all()
+    serializer = ArtistSerializer(Artist1, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(["GET"])
 def AlbumsList(request):
     Album1 = Album.objects.all()
     serializer = AlbumSerializer(Album1, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 @api_view(["GET"])
 def SongsList(request):
@@ -21,8 +29,4 @@ def SongsList(request):
     serializer = SongSerializer(Song1, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-@api_view(["GET"])
-def ArtistList(request):
-    Artist1 = Artist.objects.all()
-    serializer = ArtistSerializer(Artist1, many=True)
-    return Response(serializer.data, status=status.HTTP_200_OK)
+
