@@ -21,6 +21,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CORS_ALLOW_CREDENTIALS = True
 
+GRAPHENE = {'SCHEMA': 'django_root.schema.schema'}
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -32,7 +33,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'webapp',
     'corsheaders',
-
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
