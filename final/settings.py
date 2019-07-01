@@ -15,8 +15,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_WHITELIST = ['http://localhost:300']
 
-# Application definition
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CORS_ALLOW_CREDENTIALS = True
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -27,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'webapp',
+    'corsheaders',
 
 ]
 
