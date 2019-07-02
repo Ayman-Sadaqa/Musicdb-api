@@ -8,5 +8,5 @@ urlpatterns = [
     path('albums/', AlbumsList, name='final'),
     path('artists/', ArtistList, name='final'),
     path('songs/', SongsList, name='final'),
-    path("graphql", GraphQLView.as_view(graphiql=True)),
+    path('graphql/', GraphQLView.as_view(graphiql=True))
 ]
